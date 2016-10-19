@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>main</title>
+    <style type="text/css">
+#Title {
+  font-size: 100%;
+}
+
+</style></head>
+  <body>
+    <p><strong id="Title">Endless Rocket Game</strong></p>
+    <canvas id="gameCanvas" width="480" height="640"> This text is displayed if
+      your browser does not support HTML5. </canvas>
+    <script src="vector2.js"></script>
+    <script src="ControlsImage.js"></script>
+    <script src="menu%20background.js"></script>
+    <script src="background.js"></script>
+    <script src="keyboard.js"></script>
+    <script src="player.js"></script>
+    <script src="sprite.js"></script>
+    <script src="asteroid.js"></script>
+    <script src="main.js"></script>
+    <p><strong></strong><strong><a href="howto.html">How To Play</a>&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a href="about.html">About
+          the Developer</a></strong> </p>
+    <p><strong></strong><br>
+    </p>
+  </body>
+</html>
