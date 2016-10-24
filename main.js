@@ -73,7 +73,6 @@ var aliensKilled = 0;
 var menuimage = new menuimage();
 var background = new background();
 var player = new Player();
-var Alien = new Alien();
 var keyboard = new Keyboard();
 
 // Arrays
@@ -190,7 +189,9 @@ function runGame(deltaTime) {
 	
 	background.draw();
     player.update(deltaTime);
-	Alien.update(deltaTime);
+	for (var i = 0; i < Aliens.length; i++) {
+	Alien[i].update(deltaTime);
+	}
 	gameTimer += deltaTime;
 	asteroidSpeedTimer += deltaTime;
 		
@@ -257,24 +258,7 @@ function runGame(deltaTime) {
         spawnStarTwoTimer = 0.03;
         spawnSecondStar();
     }
-
-	// draw the alien
-    for (var i = 0; i < Aliens.length; i++) {
-        Aliens[i].position.x = Aliens[i].position.x + Aliens[i].velocityX;
-        Aliens[i].position.y = Aliens[i].position.y + Aliens[i].velocityY;
-    }
-
-    //Draw all aliens
-    for (var i = 0; i < Aliens.length; i++) {
-        context.drawImage(Aliens[i].image, Aliens[i].position.x - Aliens[i].width / 2,
-            Aliens[i].position.y - Aliens[i].height / 2);
-    }
-    spawnTimer -= deltaTime;
-    if (spawnTimer <= 0) {
-        spawnTimer = 5;
-        Alien.push(new Alien());
-    }
-
+	
     //=== ASTEROID STUFF ===//
 
     //Update Asteroids

@@ -41,8 +41,8 @@ Alien.prototype.update = function(deltaTime)
 	var movX = 0;
 	var movY = dirY;
 
-	this.velocity.x = x + movX;
-	this.velocity.y = y + movY;
+	this.velocityX = x + movX;
+	this.velocityY = y + movY;
 
 	this.velocityX = -dirX * ALIEN_SPEED;
 	this.velocityY = ALIEN_SPEED;
@@ -50,5 +50,22 @@ Alien.prototype.update = function(deltaTime)
 
 Alien.prototype.draw = function()
 {
+	
+	// draw the alien
+    for (var i = 0; i < Aliens.length; i++) {
+        Aliens[i].position.x = Aliens[i].position.x + Aliens[i].velocityX;
+        Aliens[i].position.y = Aliens[i].position.y + Aliens[i].velocityY;
+    }
 
+    //Draw all aliens
+    for (var i = 0; i < Aliens.length; i++) {
+        context.drawImage(Aliens[i].image, Aliens[i].position.x - Aliens[i].width / 2,
+            Aliens[i].position.y - Aliens[i].height / 2);
+    }
+    spawnTimer -= deltaTime;
+    if (spawnTimer <= 0) {
+        spawnTimer = 5;
+        Aliens.push(new Alien());
+    }
+	
 }
