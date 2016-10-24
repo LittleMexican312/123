@@ -54,19 +54,19 @@ function spawnAsteroid(deltaTime) {
 
 	//Random Image Chooser
 	if (between(type, 0, 1)) {
-		asteroid.image.src = "Asteroid Images/asteroid1.png";
+		asteroid.image.src = "asteroid1.png";
 	}
 	if (between(type, 1, 2)) {
-		asteroid.image.src = "Asteroid Images/asteroid2.png";
+		asteroid.image.src = "asteroid2.png";
 	}
 	if (between(type, 2, 3)) {
-		asteroid.image.src = "Asteroid Images/asteroid3.png";
+		asteroid.image.src = "asteroid3.png";
 	}
 	if (between(type, 3, 4)) {
-		asteroid.image.src = "Asteroid Images/asteroid4.png";
+		asteroid.image.src = "asteroid4.png";
 	}
 	if (between(type, 4, 5)) {
-		asteroid.image.src = "Asteroid Images/asteroid5.png";
+		asteroid.image.src = "asteroid5.png";
 	}
 
 
